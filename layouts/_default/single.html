@@ -7,7 +7,7 @@
         <div class="title">
           <h1 class="title">{{ .Title }}</h1>
           <div class="post-meta">
-            <time>Posted on {{ dateFormat ":date_medium" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time>
+            <time>Опубликовано {{ .Date.Format "02.01.2006" }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time>
             {{ if .Params.tags }}
             <div class="post-tags">
               <nav class="nav tags">
@@ -21,23 +21,40 @@
             {{ end }}
           </div>
         </div>
+        {{ if isset .Params "toc" }}
+        <div class="post-toc">
+          <strong>Содержание</strong>
+          {{ .TableOfContents }}
+        </div>
+        {{ end }}
         {{ if isset .Params "tldr" }}
         <div class="tldr">
-          <strong>tl;dr:</strong>
+          <strong>Коротко:</strong>
           {{ .Params.tldr }}
         </div>{{ end }}
         <section class="body">
           {{ .Content }}
         </section>
+        {{ if isset .Params "series" }}
+        {{ $seriesPages := sort (where .Site.RegularPages "Params.series" .Params.series) "Date" "asc" }}
+        {{ if gt (len $seriesPages) 1 }}
+        <nav class="post-series" aria-label="Навигация по серии">
+          <div class="post-series-title">Серия статей</div>
+          <ol>
+            {{ range $seriesPages }}
+            <li class="{{ if eq .RelPermalink $.RelPermalink }}is-current{{ end }}">
+              {{ if eq .RelPermalink $.RelPermalink }}
+              <span>{{ .Title }}</span>
+              {{ else }}
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ end }}
+            </li>
+            {{ end }}
+          </ol>
+        </nav>
+        {{ end }}
+        {{ end }}
       </div>
-
-      <!-- TOC -->
-      {{ if isset .Params "toc" }}
-      <div class="toc">
-        <strong>Table of contents:</strong>
-        {{ .TableOfContents }}
-      </div>
-      {{ end }}
     </div>
 
     <!-- Disqus -->
@@ -52,4 +69,3 @@
   </article>
 </main>
 {{ end }}
-
