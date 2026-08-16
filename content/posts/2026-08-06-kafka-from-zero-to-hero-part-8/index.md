@@ -5,6 +5,7 @@ description: "Разбираем Kafka для интервью и System Design:
 tags: [kafka]
 thumbnail: "images/image.png"
 toc: true
+draft: true
 series: "kafka-from-zero-to-hero"
 tldr: "На интервью по Kafka важно объяснять не термины по отдельности, а системные компромиссы: порядок, масштабирование, сбои, дубликаты, lag и границы ответственности бизнес-логики."
 ---
