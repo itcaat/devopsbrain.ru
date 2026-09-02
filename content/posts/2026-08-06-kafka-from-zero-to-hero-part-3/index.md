@@ -5,6 +5,7 @@ description: "Разбираем, что физически хранится в�
 tags: [kafka]
 thumbnail: "images/image.png"
 toc: true
+draft: true
 series: "kafka-from-zero-to-hero"
 tldr: "Внутри Partition Kafka хранит append-only log. Offset задаёт позицию записи, а Consumer хранит только свою точку чтения."
 ---

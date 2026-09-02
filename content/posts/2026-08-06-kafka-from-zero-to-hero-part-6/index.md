@@ -5,6 +5,7 @@ description: "Разбираем Kafka как очередь задач и по�
 tags: [kafka]
 thumbnail: "images/image.png"
 toc: true
+draft: true
 series: "kafka-from-zero-to-hero"
 tldr: "Kafka может работать и как очередь задач, и как поток событий. Production-дизайн начинается с выбора типа сообщения, границ Topic, Key, количества Partition, Retention и контракта события."
 ---

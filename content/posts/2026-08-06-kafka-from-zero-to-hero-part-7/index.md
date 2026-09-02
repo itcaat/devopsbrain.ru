@@ -5,6 +5,7 @@ description: "Разбираем production-паттерны Kafka: гарант
 tags: [kafka]
 thumbnail: "images/image.png"
 toc: true
+draft: true
 series: "kafka-from-zero-to-hero"
 tldr: "Надёжность Kafka строится не одной настройкой, а цепочкой решений: producer должен безопасно записывать события, consumer — корректно коммитить offset, а ошибки — уходить в retry или DLQ без блокировки партиции."
 ---

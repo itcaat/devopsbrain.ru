@@ -5,6 +5,7 @@ description: "Разбираем, как Kafka масштабируется го
 tags: [kafka]
 thumbnail: "images/image.png"
 toc: true
+draft: true
 series: "kafka-from-zero-to-hero"
 tldr: "Partitions дают Kafka параллелизм, а Consumer Groups распределяют чтение между обработчиками. Порядок сообщений сохраняется только внутри одной Partition."
 ---

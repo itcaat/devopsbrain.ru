@@ -5,6 +5,7 @@ description: "Разбираем отказоустойчивость Kafka: к�
 tags: [kafka]
 thumbnail: "images/image.png"
 toc: true
+draft: true
 series: "kafka-from-zero-to-hero"
 tldr: "Репликация защищает Kafka от отказов Broker. Leader принимает чтение и запись, Followers синхронизируются, а ISR помогает выбрать актуальную реплику при сбое."
 ---

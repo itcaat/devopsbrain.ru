@@ -5,6 +5,7 @@ description: "Разбираем ключевые причины высокой 
 tags: [kafka]
 thumbnail: "images/image.png"
 toc: true
+draft: true
 series: "kafka-from-zero-to-hero"
 tldr: "Kafka быстрая не из-за магии, а из-за простых инженерных решений: последовательной записи, Page Cache, batching, partitioning, неизменяемости и Zero Copy."
 ---
