@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="512" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">CreateTime and LogAppendTime</title>
+  <desc id="desc">An event happens at 12:00 and reaches Kafka at 12:05. CreateTime can preserve the producer timestamp, while LogAppendTime stores the broker append time.</desc>
+  <defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.4" fill="#d9d6cf" opacity=".42"/></pattern><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#172033" flood-opacity=".08"/></filter><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#a70d18"/></marker></defs>
+  <rect width="1200" height="700" fill="#f8f6f1"/><rect width="1200" height="700" fill="url(#grid)"/>
+  <g font-family="Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif">
+    <text x="60" y="82" fill="#172033" font-size="48" font-weight="760">What does <tspan fill="#a70d18">Timestamp</tspan> mean?</text>
+    <text x="62" y="122" fill="#5c6069" font-size="21">The topic configuration decides which time Kafka stores</text>
+    <line x1="150" y1="275" x2="220" y2="275" stroke="#c9c5bd" stroke-width="5"/><line x1="260" y1="275" x2="900" y2="275" stroke="#c9c5bd" stroke-width="5"/><line x1="940" y1="275" x2="1048" y2="275" stroke="#c9c5bd" stroke-width="5" marker-end="url(#arrow)"/>
+    <circle cx="240" cy="275" r="13" fill="#a70d18" stroke="#fff" stroke-width="4"/><circle cx="920" cy="275" r="13" fill="#275d91" stroke="#fff" stroke-width="4"/>
+    <text x="240" y="224" text-anchor="middle" fill="#172033" font-size="24" font-weight="760">12:00</text><text x="240" y="316" text-anchor="middle" fill="#a70d18" font-size="16" font-weight="750">ORDER CREATED</text>
+    <text x="920" y="224" text-anchor="middle" fill="#172033" font-size="24" font-weight="760">12:05</text><text x="920" y="316" text-anchor="middle" fill="#275d91" font-size="16" font-weight="750">APPENDED BY BROKER</text>
+    <text x="580" y="258" text-anchor="middle" fill="#6a6862" font-size="17">network delay · retries · buffering</text>
+    <g filter="url(#shadow)">
+      <rect x="90" y="374" width="490" height="212" rx="8" fill="#fffdfa" stroke="#a70d18" stroke-width="3"/>
+      <text x="122" y="418" fill="#a70d18" font-size="16" font-weight="750">message.timestamp.type = CreateTime</text>
+      <text x="122" y="475" fill="#172033" font-size="31" font-weight="760">stored timestamp: 12:00</text>
+      <text x="122" y="520" fill="#5c6069" font-size="17">when Producer supplied the event time</text>
+      <text x="122" y="551" fill="#5c6069" font-size="17">Kafka keeps the Producer timestamp</text>
+    </g>
+    <g filter="url(#shadow)">
+      <rect x="620" y="374" width="490" height="212" rx="8" fill="#fffdfa" stroke="#275d91" stroke-width="3"/>
+      <text x="652" y="418" fill="#275d91" font-size="16" font-weight="750">message.timestamp.type = LogAppendTime</text>
+      <text x="652" y="475" fill="#172033" font-size="31" font-weight="760">stored timestamp: 12:05</text>
+      <text x="652" y="520" fill="#5c6069" font-size="17">Broker replaces the supplied timestamp</text>
+      <text x="652" y="551" fill="#5c6069" font-size="17">with the append time</text>
+    </g>
+  </g>
+</svg>

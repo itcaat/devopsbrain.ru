@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">From Record to stored address</title>
+  <desc id="desc">A producer creates a record, the partitioner selects partition 2, the producer sends to its leader broker, and Kafka appends the record with an offset.</desc>
+  <defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.4" fill="#d9d6cf" opacity=".42"/></pattern><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#172033" flood-opacity=".08"/></filter><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#a70d18"/></marker></defs>
+  <rect width="1200" height="700" fill="#f8f6f1"/><rect width="1200" height="700" fill="url(#grid)"/>
+  <g font-family="Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif">
+    <text x="60" y="82" fill="#172033" font-size="48" font-weight="760">From Record to <tspan fill="#a70d18">stored address</tspan></text>
+    <text x="62" y="122" fill="#5c6069" font-size="21">Key selects the log; the Leader appends the record and assigns an Offset</text>
+    <g filter="url(#shadow)">
+      <rect x="60" y="290" width="210" height="206" rx="8" fill="#fffdfa" stroke="#a70d18" stroke-width="3"/><rect x="60" y="290" width="210" height="46" rx="8" fill="#a70d18"/><text x="165" y="321" text-anchor="middle" fill="#fff" font-size="16" font-weight="750">PRODUCER</text><text x="165" y="383" text-anchor="middle" fill="#172033" font-size="24" font-weight="760">Record</text><text x="165" y="421" text-anchor="middle" fill="#5c6069" font-size="16">key: 48291</text><text x="165" y="453" text-anchor="middle" fill="#5c6069" font-size="14">value: PaymentCompleted</text>
+      <rect x="354" y="320" width="214" height="146" rx="8" fill="#fffdfa" stroke="#275d91" stroke-width="3"/><rect x="354" y="320" width="214" height="44" rx="8" fill="#275d91"/><text x="461" y="350" text-anchor="middle" fill="#fff" font-size="15" font-weight="750">PARTITIONER</text><text x="461" y="408" text-anchor="middle" fill="#172033" font-size="22" font-weight="760">hash(key) → P2</text>
+      <path d="M662 214H1122Q1130 214 1130 222V570Q1130 578 1122 578H662Q654 578 654 570V222Q654 214 662 214Z" fill="#fffdfa" stroke="#a70d18" stroke-width="3"/><rect x="654" y="214" width="476" height="48" rx="8" fill="#172033"/><text x="680" y="246" fill="#fff" font-size="16" font-weight="750">KAFKA CLUSTER</text>
+      <g fill="#fff" stroke-width="2.5"><rect x="692" y="300" width="170" height="70" rx="7" stroke="#8c94a3"/><rect x="692" y="390" width="170" height="70" rx="7" stroke="#8c94a3"/><rect x="692" y="480" width="170" height="70" rx="7" stroke="#a70d18"/></g>
+      <g fill="#172033" font-size="16" font-weight="720"><text x="710" y="342">Broker 1</text><text x="710" y="432">Broker 2</text><text x="710" y="522">Broker 3</text></g><text x="844" y="522" text-anchor="end" fill="#a70d18" font-size="11" font-weight="750">Leader P2</text>
+      <rect x="900" y="300" width="192" height="250" rx="8" fill="#fff7f5" stroke="#a70d18" stroke-width="3"/><text x="996" y="338" text-anchor="middle" fill="#a70d18" font-size="15" font-weight="750">PARTITION 2</text>
+      <g fill="#fff" stroke="#8c94a3" stroke-width="2"><rect x="928" y="370" width="42" height="54" rx="5"/><rect x="980" y="370" width="42" height="54" rx="5"/><rect x="1032" y="370" width="42" height="54" rx="5"/></g><g fill="#6a6862" font-size="11" text-anchor="middle"><text x="949" y="402">…211</text><text x="1001" y="402">…212</text><text x="1053" y="402">…213</text></g>
+      <rect x="928" y="454" width="146" height="54" rx="6" fill="#f3e5e4" stroke="#a70d18" stroke-width="2.5"/><text x="1001" y="477" text-anchor="middle" fill="#a70d18" font-size="12" font-weight="750">APPENDED RECORD</text><text x="1001" y="497" text-anchor="middle" fill="#172033" font-size="12" font-weight="720">offset 58213</text>
+    </g>
+    <path d="M270 393H354" stroke="#a70d18" stroke-width="4" marker-end="url(#arrow)" opacity=".55"/>
+    <path d="M568 393C622 393 622 515 682 515" fill="none" stroke="#a70d18" stroke-width="4" marker-end="url(#arrow)" opacity=".55"/>
+    <path d="M862 535H890" fill="none" stroke="#a70d18" stroke-width="3" marker-end="url(#arrow)" opacity=".55"/>
+    <text x="600" y="640" text-anchor="middle" fill="#172033" font-size="18" font-weight="720" font-family="ui-monospace,'SFMono-Regular',Consolas,monospace">orders.events / partition 2 / offset 58213</text>
+  </g>
+</svg>

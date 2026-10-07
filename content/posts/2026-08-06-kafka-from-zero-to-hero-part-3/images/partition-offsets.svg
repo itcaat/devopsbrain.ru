@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="512" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
+  <title id="title">Offsets belong to a Partition</title>
+  <desc id="desc">Two partitions have independent offset sequences, and a consumer group stores a separate next offset for each partition.</desc>
+  <defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.4" fill="#d9d6cf" opacity=".42"/></pattern><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#172033" flood-opacity=".08"/></filter></defs>
+  <rect width="1200" height="700" fill="#f8f6f1"/><rect width="1200" height="700" fill="url(#grid)"/>
+  <g font-family="Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif">
+    <text x="60" y="82" fill="#172033" font-size="48" font-weight="760">Offsets belong to a <tspan fill="#a70d18">Partition</tspan></text>
+    <text x="62" y="122" fill="#5c6069" font-size="21">Each log owns its sequence; each Consumer Group owns its reading position</text>
+    <g filter="url(#shadow)">
+      <rect x="70" y="210" width="720" height="170" rx="8" fill="#fffdfa" stroke="#a70d18" stroke-width="3"/><rect x="70" y="210" width="720" height="44" rx="8" fill="#172033"/><text x="96" y="240" fill="#fff" font-size="16" font-weight="750">PARTITION 0</text>
+      <rect x="70" y="414" width="720" height="170" rx="8" fill="#fffdfa" stroke="#275d91" stroke-width="3"/><rect x="70" y="414" width="720" height="44" rx="8" fill="#172033"/><text x="96" y="444" fill="#fff" font-size="16" font-weight="750">PARTITION 1</text>
+    </g>
+    <g fill="#fff" stroke-width="2.5"><g stroke="#a70d18"><rect x="112" y="286" width="118" height="62" rx="6"/><rect x="246" y="286" width="118" height="62" rx="6"/><rect x="380" y="286" width="118" height="62" rx="6"/><rect x="514" y="286" width="118" height="62" rx="6"/></g><g stroke="#275d91"><rect x="112" y="490" width="118" height="62" rx="6"/><rect x="246" y="490" width="118" height="62" rx="6"/><rect x="380" y="490" width="118" height="62" rx="6"/><rect x="514" y="490" width="118" height="62" rx="6"/></g></g>
+    <g fill="#172033" font-size="17" font-weight="720" text-anchor="middle"><text x="171" y="313">offset 0</text><text x="305" y="313">offset 1</text><text x="439" y="313">offset 2</text><text x="573" y="313">offset 3</text><text x="171" y="517">offset 0</text><text x="305" y="517">offset 1</text><text x="439" y="517">offset 2</text><text x="573" y="517">offset 3</text></g>
+    <g fill="#6a6862" font-size="12" text-anchor="middle"><text x="171" y="336">A</text><text x="305" y="336">B</text><text x="439" y="336">C</text><text x="573" y="336">D</text><text x="171" y="540">E</text><text x="305" y="540">F</text><text x="439" y="540">G</text><text x="573" y="540">H</text></g>
+    <g filter="url(#shadow)">
+      <rect x="838" y="244" width="292" height="306" rx="8" fill="#fffdfa" stroke="#187769" stroke-width="3"/><rect x="838" y="244" width="292" height="46" rx="8" fill="#187769"/><text x="864" y="275" fill="#fff" font-size="16" font-weight="750">CONSUMER GROUP · analytics</text>
+      <text x="870" y="339" fill="#172033" font-size="18" font-weight="720">Partition 0</text><text x="1098" y="339" text-anchor="end" fill="#a70d18" font-size="20" font-weight="760">next: 3</text>
+      <path d="M870 367H1098" stroke="#ead0d2" stroke-width="9" stroke-linecap="round"/><circle cx="1042" cy="367" r="11" fill="#a70d18" stroke="#fff" stroke-width="3"/>
+      <text x="870" y="437" fill="#172033" font-size="18" font-weight="720">Partition 1</text><text x="1098" y="437" text-anchor="end" fill="#275d91" font-size="20" font-weight="760">next: 2</text>
+      <path d="M870 465H1098" stroke="#c8d9e8" stroke-width="9" stroke-linecap="round"/><circle cx="984" cy="465" r="11" fill="#275d91" stroke="#fff" stroke-width="3"/>
+      <text x="984" y="515" text-anchor="middle" fill="#5c6069" font-size="15">positions are committed separately</text>
+    </g>
+  </g>
+</svg>

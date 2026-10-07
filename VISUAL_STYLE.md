@@ -66,8 +66,9 @@ When animation is requested:
 
 ## Composition
 
-- Default cover aspect ratio: 3:2 landscape.
+- Prefer a 3:2 landscape cover only when the composition actually uses that height. Otherwise use a compact content-fit ratio instead of padding the bottom with empty space.
 - For inline technical diagrams, fit the canvas to the actual composition. A compact ratio such as 12:7 is preferable to preserving 3:2 with a visibly empty footer area.
+- Crop the final canvas to the composition instead of keeping a standard height. The space below the lowest node, arrow, or label should be comparable to the other outer margins; do not leave a large empty footer.
 - Make the subject readable as a blog thumbnail.
 - Use a strong title or topic label when text is required.
 - Keep diagrams centered and balanced.

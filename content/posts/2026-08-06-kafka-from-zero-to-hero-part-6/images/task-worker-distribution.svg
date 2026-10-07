@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="472" viewBox="0 0 1200 590" role="img" aria-labelledby="title desc">
+  <title id="title">Kafka as a task queue</title>
+  <desc id="desc">A Consumer Group assigns each Partition to one active worker.</desc>
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.4" fill="#d9d6cf" opacity=".42"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#172033" flood-opacity=".08"/></filter>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#a70d18"/></marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#275d91"/></marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#187769"/></marker>
+  </defs>
+  <rect width="1200" height="590" fill="#f8f6f1"/>
+  <rect width="1200" height="590" fill="url(#grid)"/>
+  <g font-family="Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif">
+    <text x="60" y="82" fill="#172033" font-size="46" font-weight="760">Kafka as a</text>
+    <text x="315" y="82" fill="#a70d18" font-size="46" font-weight="760">task queue</text>
+    <text x="62" y="122" fill="#5c6069" font-size="21" font-weight="500">One Consumer Group distributes Partition ownership across active workers</text>
+
+    <g filter="url(#shadow)">
+      <path d="M68 180H382Q390 180 390 188V522Q390 530 382 530H68Q60 530 60 522V188Q60 180 68 180Z" fill="#fffdfa" stroke="#a70d18" stroke-width="3"/>
+      <rect x="60" y="180" width="330" height="48" rx="8" fill="#a70d18"/>
+      <text x="225" y="212" text-anchor="middle" fill="#fff" font-size="17" font-weight="750">PARTITION 0</text>
+      <text x="225" y="270" text-anchor="middle" fill="#172033" font-size="18" font-weight="720">invoice-generation</text>
+      <g fill="#fff7f5" stroke="#a70d18" stroke-width="2"><rect x="138" y="292" width="48" height="44" rx="5"/><rect x="201" y="292" width="48" height="44" rx="5"/><rect x="264" y="292" width="48" height="44" rx="5"/></g>
+      <g fill="#a70d18" font-size="13" font-weight="700" text-anchor="middle"><text x="162" y="320">T1</text><text x="225" y="320">T2</text><text x="288" y="320">T3</text></g>
+      <path d="M225 344V395" stroke="#a70d18" stroke-width="3" marker-end="url(#arrowRed)" opacity=".55"/>
+      <text x="245" y="375" fill="#a70d18" font-size="13" font-weight="650">assigned</text>
+      <rect x="105" y="408" width="240" height="72" rx="7" fill="#fff" stroke="#b8bbc1" stroke-width="2"/>
+      <text x="225" y="438" text-anchor="middle" fill="#172033" font-size="19" font-weight="720">Worker A</text>
+      <text x="225" y="462" text-anchor="middle" fill="#a70d18" font-size="13" font-weight="650">one active owner</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <path d="M443 180H757Q765 180 765 188V522Q765 530 757 530H443Q435 530 435 522V188Q435 180 443 180Z" fill="#fffdfa" stroke="#275d91" stroke-width="3"/>
+      <rect x="435" y="180" width="330" height="48" rx="8" fill="#275d91"/>
+      <text x="600" y="212" text-anchor="middle" fill="#fff" font-size="17" font-weight="750">PARTITION 1</text>
+      <text x="600" y="270" text-anchor="middle" fill="#172033" font-size="18" font-weight="720">invoice-generation</text>
+      <g fill="#f5f8fb" stroke="#275d91" stroke-width="2"><rect x="513" y="292" width="48" height="44" rx="5"/><rect x="576" y="292" width="48" height="44" rx="5"/><rect x="639" y="292" width="48" height="44" rx="5"/></g>
+      <g fill="#275d91" font-size="13" font-weight="700" text-anchor="middle"><text x="537" y="320">T4</text><text x="600" y="320">T5</text><text x="663" y="320">T6</text></g>
+      <path d="M600 344V395" stroke="#275d91" stroke-width="3" marker-end="url(#arrowBlue)" opacity=".55"/>
+      <text x="620" y="375" fill="#275d91" font-size="13" font-weight="650">assigned</text>
+      <rect x="480" y="408" width="240" height="72" rx="7" fill="#fff" stroke="#b8bbc1" stroke-width="2"/>
+      <text x="600" y="438" text-anchor="middle" fill="#172033" font-size="19" font-weight="720">Worker B</text>
+      <text x="600" y="462" text-anchor="middle" fill="#275d91" font-size="13" font-weight="650">one active owner</text>
+    </g>
+
+    <g filter="url(#shadow)">
+      <path d="M818 180H1132Q1140 180 1140 188V522Q1140 530 1132 530H818Q810 530 810 522V188Q810 180 818 180Z" fill="#fffdfa" stroke="#187769" stroke-width="3"/>
+      <rect x="810" y="180" width="330" height="48" rx="8" fill="#187769"/>
+      <text x="975" y="212" text-anchor="middle" fill="#fff" font-size="17" font-weight="750">PARTITION 2</text>
+      <text x="975" y="270" text-anchor="middle" fill="#172033" font-size="18" font-weight="720">invoice-generation</text>
+      <g fill="#f4faf8" stroke="#187769" stroke-width="2"><rect x="888" y="292" width="48" height="44" rx="5"/><rect x="951" y="292" width="48" height="44" rx="5"/><rect x="1014" y="292" width="48" height="44" rx="5"/></g>
+      <g fill="#187769" font-size="13" font-weight="700" text-anchor="middle"><text x="912" y="320">T7</text><text x="975" y="320">T8</text><text x="1038" y="320">T9</text></g>
+      <path d="M975 344V395" stroke="#187769" stroke-width="3" marker-end="url(#arrowGreen)" opacity=".55"/>
+      <text x="995" y="375" fill="#187769" font-size="13" font-weight="650">assigned</text>
+      <rect x="855" y="408" width="240" height="72" rx="7" fill="#fff" stroke="#b8bbc1" stroke-width="2"/>
+      <text x="975" y="438" text-anchor="middle" fill="#172033" font-size="19" font-weight="720">Worker C</text>
+      <text x="975" y="462" text-anchor="middle" fill="#187769" font-size="13" font-weight="650">one active owner</text>
+    </g>
+  </g>
+</svg>
