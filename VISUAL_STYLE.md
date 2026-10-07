@@ -8,6 +8,45 @@ Create minimalist technical visuals for an engineering blog.
 
 The image should feel clear, structured, and useful rather than decorative. Prefer architecture diagrams, system flows, queues, timelines, dashboards, network paths, and component relationships over abstract tech backgrounds.
 
+## Default Technical Diagram Style
+
+Use the visual language of this reference as the default for technical diagrams and diagram-based article covers:
+
+```text
+content/posts/2026-08-06-kafka-from-zero-to-hero-part-1/images/kafka-overview.svg
+```
+
+The default style is a clean editorial architecture canvas:
+
+- 3:2 landscape composition on a light off-white background;
+- a very subtle dot grid that supports alignment without competing with content;
+- a large, left-aligned title with one or two important words highlighted in dark red;
+- a short subtitle listing the main concepts covered by the visual;
+- an optional compact dark badge in the upper-right corner for context or scope;
+- one clear technical composition beneath the title, organized from left to right;
+- related components grouped inside labeled system boundaries;
+- dark navy section headers, dark red primary flows, and muted blue or green secondary flows;
+- rectangular nodes with modest corner radii, thin borders, restrained shadows, and generous internal padding;
+- short English labels inside diagrams unless the user requests another language;
+- a compact dark summary or legend strip at the bottom when it helps explain the visual hierarchy.
+
+Technical accuracy takes priority over visual symmetry. Show ownership and containment explicitly: for example, a Kafka Partition belongs inside a Kafka cluster and is hosted on a Broker rather than appearing as an unrelated stage in a linear pipeline.
+
+Keep the diagram readable at thumbnail size. Prefer a few meaningful components and visible relationships over a complete inventory of the system.
+
+### Motion Policy
+
+Generate static SVG and PNG assets by default. Add GIF or SVG animation only when the user explicitly requests animation.
+
+When animation is requested:
+
+- keep nodes, labels, containers, and the camera stationary;
+- animate only meaningful system behavior such as event flow, replication, processing, retries, or offset progress;
+- use small particles or compact markers that follow existing routes;
+- keep loops calm, deterministic, and seamless;
+- do not add decorative motion, pulsing backgrounds, or moving text;
+- always provide a readable static PNG frame alongside the animated asset.
+
 ## Visual Language
 
 - Light off-white background.
@@ -75,6 +114,24 @@ When an image needs text:
 - Verify generated text carefully before using the image.
 
 ## File Naming
+
+Store every visual asset for an article in the `images/` subdirectory of that article:
+
+```text
+content/posts/<post-slug>/images/
+```
+
+This applies to thumbnails, diagrams, illustrations, animated GIFs, static PNG fallbacks, and editable SVG sources. Do not place visual assets next to `index.md`.
+
+Keep related formats together and use the same descriptive basename:
+
+```text
+images/kafka-log-offsets.svg
+images/kafka-log-offsets.png
+images/kafka-log-offsets.gif
+```
+
+Avoid additional preview or generated-asset subdirectories unless the user explicitly requests them.
 
 For post thumbnails, prefer:
 
