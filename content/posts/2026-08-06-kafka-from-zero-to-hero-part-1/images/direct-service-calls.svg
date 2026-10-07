@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="640" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="560" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
   <title id="title">Direct service calls</title>
   <desc id="desc">Orders Service directly calls Payment, Inventory, Email, and Analytics.</desc>
   <defs>
@@ -11,7 +11,6 @@
   <g font-family="Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif">
     <text x="60" y="82" fill="#172033" font-size="50" font-weight="760">Direct <tspan fill="#a70d18">service calls</tspan></text>
     <text x="62" y="122" fill="#5c6069" font-size="21">Orders Service coordinates every operation itself</text>
-    <g transform="translate(902 48)"><rect width="238" height="64" rx="7" fill="#172033"/><circle cx="28" cy="25" r="7" fill="#e4475b"/><text x="48" y="29" fill="#fff" font-size="14" font-weight="750">SYNCHRONOUS FLOW</text><text x="48" y="48" fill="#c8ced8" font-size="11" font-weight="650">ONE REQUEST · FOUR CALLS</text></g>
     <g filter="url(#shadow)"><rect x="80" y="286" width="280" height="228" rx="8" fill="#fffdfa" stroke="#a70d18" stroke-width="3"/><rect x="80" y="286" width="280" height="46" rx="8" fill="#a70d18"/><text x="220" y="317" text-anchor="middle" fill="#fff" font-size="17" font-weight="750">ORDER WORKFLOW</text><text x="220" y="396" text-anchor="middle" fill="#172033" font-size="29" font-weight="730">Orders Service</text><text x="220" y="430" text-anchor="middle" fill="#6a6862" font-size="18">creates the order</text><rect x="132" y="459" width="176" height="32" rx="5" fill="#f3e5e4"/><text x="220" y="481" text-anchor="middle" fill="#a70d18" font-size="13" font-weight="750">WAITS FOR EVERY CALL</text></g>
     <g fill="#fffdfa" stroke-width="3" filter="url(#shadow)">
       <rect x="650" y="238" width="420" height="88" rx="8" stroke="#a70d18"/><rect x="650" y="336" width="420" height="88" rx="8" stroke="#275d91"/><rect x="650" y="434" width="420" height="88" rx="8" stroke="#187769"/><rect x="650" y="532" width="420" height="88" rx="8" stroke="#a70d18"/>
@@ -20,6 +19,6 @@
     <g fill="#6a6862" font-size="16"><text x="910" y="291">charge</text><text x="910" y="389">reserve stock</text><text x="910" y="487">send receipt</text><text x="910" y="585">record sale</text></g>
     <g fill="none" stroke="#a70d18" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow)" opacity=".35"><use xlink:href="#r1"/><use xlink:href="#r2"/><use xlink:href="#r3"/><use xlink:href="#r4"/></g>
     <g fill="#a70d18" stroke="#fffdfa" stroke-width="3"><circle r="9"><animateMotion dur="6s" begin="0s" repeatCount="indefinite"><mpath xlink:href="#r1"/></animateMotion></circle><circle r="9"><animateMotion dur="6s" begin="-1.5s" repeatCount="indefinite"><mpath xlink:href="#r2"/></animateMotion></circle><circle r="9"><animateMotion dur="6s" begin="-3s" repeatCount="indefinite"><mpath xlink:href="#r3"/></animateMotion></circle><circle r="9"><animateMotion dur="6s" begin="-4.5s" repeatCount="indefinite"><mpath xlink:href="#r4"/></animateMotion></circle></g>
-    <g transform="translate(60 692)"><rect width="1080" height="62" rx="7" fill="#172033"/><circle cx="30" cy="31" r="7" fill="#a70d18"/><text x="50" y="38" fill="#fff" font-size="18" font-weight="650">Simple at first</text><path d="M244 31H314" stroke="#8c94a3" stroke-width="2"/><circle cx="342" cy="31" r="7" fill="#275d91"/><text x="362" y="38" fill="#fff" font-size="18" font-weight="650">Orders knows every dependency</text><path d="M706 31H776" stroke="#8c94a3" stroke-width="2"/><circle cx="804" cy="31" r="7" fill="#187769"/><text x="824" y="38" fill="#fff" font-size="18" font-weight="650">Failures propagate</text></g>
+
   </g>
 </svg>

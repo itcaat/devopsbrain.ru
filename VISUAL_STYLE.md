@@ -18,17 +18,19 @@ content/posts/2026-08-06-kafka-from-zero-to-hero-part-1/images/kafka-overview.sv
 
 The default style is a clean editorial architecture canvas:
 
-- 3:2 landscape composition on a light off-white background;
+- 3:2 landscape composition for covers; technical diagrams may use a more compact content-fit canvas on a light off-white background;
 - a very subtle dot grid that supports alignment without competing with content;
 - a large, left-aligned title with one or two important words highlighted in dark red;
 - a short subtitle listing the main concepts covered by the visual;
-- an optional compact dark badge in the upper-right corner for context or scope;
+- no decorative context badges in the upper-right corner; put necessary scope in the title, subtitle, or directly beside the relevant element;
 - one clear technical composition beneath the title, organized from left to right;
 - related components grouped inside labeled system boundaries;
 - dark navy section headers, dark red primary flows, and muted blue or green secondary flows;
 - rectangular nodes with modest corner radii, thin borders, restrained shadows, and generous internal padding;
 - short English labels inside diagrams unless the user requests another language;
-- a compact dark summary or legend strip at the bottom when it helps explain the visual hierarchy.
+- no decorative summary strip at the bottom: conclusions belong in the article text unless the diagram genuinely needs a legend.
+
+Use a legend only when color, shape, or line style consistently encodes a specific meaning in the diagram. Every legend marker must correspond directly to the same visual encoding in the main composition. Do not place colored dots beside unrelated takeaway phrases: readers will reasonably interpret them as a key to the diagram.
 
 Technical accuracy takes priority over visual symmetry. Show ownership and containment explicitly: for example, a Kafka Partition belongs inside a Kafka cluster and is hosted on a Broker rather than appearing as an unrelated stage in a linear pipeline.
 
@@ -43,6 +45,9 @@ When animation is requested:
 - keep nodes, labels, containers, and the camera stationary;
 - animate only meaningful system behavior such as event flow, replication, processing, retries, or offset progress;
 - use small particles or compact markers that follow existing routes;
+- use shape semantically, not decoratively: the same kind of moving entity must keep the same shape across one diagram and, where practical, across a series;
+- distinguish equivalent messages, records, or flow markers by route and color rather than by arbitrary circles, squares, or other shapes;
+- introduce a different marker shape only when it represents a genuinely different entity, and make that distinction clear from the diagram itself;
 - keep loops calm, deterministic, and seamless;
 - do not add decorative motion, pulsing backgrounds, or moving text;
 - always provide a readable static PNG frame alongside the animated asset.
@@ -61,7 +66,8 @@ When animation is requested:
 
 ## Composition
 
-- Default aspect ratio: 3:2 landscape.
+- Default cover aspect ratio: 3:2 landscape.
+- For inline technical diagrams, fit the canvas to the actual composition. A compact ratio such as 12:7 is preferable to preserving 3:2 with a visibly empty footer area.
 - Make the subject readable as a blog thumbnail.
 - Use a strong title or topic label when text is required.
 - Keep diagrams centered and balanced.
