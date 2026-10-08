@@ -17,7 +17,7 @@ tldr: "Внутри Partition Kafka хранит append-only log. Offset зад�
 
 Каждая Partition — упорядоченная последовательность записей:
 
-![События заказа последовательно добавляются в журнал Partition](images/partition-append-log.png)
+![События заказа последовательно добавляются в журнал Partition](images/partition-append-log.gif)
 
 Такой журнал называют append-only log: новые записи добавляются только в конец. Kafka не приходится искать место для вставки или сдвигать уже записанные данные.
 

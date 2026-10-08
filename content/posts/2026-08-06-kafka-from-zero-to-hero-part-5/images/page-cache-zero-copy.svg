@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="390" viewBox="0 143 1200 487" role="img" aria-labelledby="title desc">
   <title id="title">Page Cache serves two independent paths</title>
   <desc id="desc">Kafka writes into the operating system Page Cache. The operating system can flush pages to disk while Kafka sends cached data to a network socket.</desc>
   <defs>
@@ -10,9 +10,9 @@
   <rect width="1200" height="700" fill="#f8f6f1"/>
   <rect width="1200" height="700" fill="url(#grid)"/>
   <g font-family="Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif">
-    <text x="60" y="82" fill="#172033" font-size="46" font-weight="760">Page Cache serves</text>
-    <text x="493" y="82" fill="#a70d18" font-size="46" font-weight="760">two paths</text>
-    <text x="62" y="122" fill="#5c6069" font-size="21" font-weight="500">Disk flush and network transfer can progress independently</text>
+
+
+
     <g filter="url(#shadow)">
       <rect x="65" y="275" width="245" height="210" rx="8" fill="#fffdfa" stroke="#a70d18" stroke-width="3"/>
       <rect x="65" y="275" width="245" height="46" rx="8" fill="#a70d18"/>
@@ -46,5 +46,5 @@
       <text x="972.5" y="513" text-anchor="middle" fill="#172033" font-size="19" font-weight="720">Consumer reads</text>
       <text x="972.5" y="542" text-anchor="middle" fill="#5c6069" font-size="15" font-weight="600">less user-space copying</text>
     </g>
-  </g>
+  <circle r="6" fill="#275d91" stroke="#fffdfa" stroke-width="2"><animateMotion path="M310 380 H390" dur="6s" repeatCount="indefinite" keyTimes="0;0.18;1" keyPoints="0;1;1" calcMode="linear"/><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.015;0.16499999999999998;0.18;1"/></circle><circle r="6" fill="#275d91" stroke="#fffdfa" stroke-width="2"><animateMotion path="M670 330 C730 330 744 252 805 252" dur="6s" repeatCount="indefinite" keyTimes="0;0.35;0.85;1" keyPoints="0;0;1;1" calcMode="linear"/><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.365;0.835;0.85;1"/></circle><circle r="6" fill="#187769" stroke="#fffdfa" stroke-width="2"><animateMotion path="M670 430 C730 430 744 508 805 508" dur="6s" repeatCount="indefinite" keyTimes="0;0.25;0.60;1" keyPoints="0;0;1;1" calcMode="linear"/><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.265;0.585;0.6;1"/></circle></g>
 </svg>

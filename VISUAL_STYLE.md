@@ -20,10 +20,10 @@ The default style is a clean editorial architecture canvas:
 
 - 3:2 landscape composition for covers; technical diagrams may use a more compact content-fit canvas on a light off-white background;
 - a very subtle dot grid that supports alignment without competing with content;
-- a large, left-aligned title with one or two important words highlighted in dark red;
-- a short subtitle listing the main concepts covered by the visual;
+- a short, left-aligned title on covers, with important words highlighted in dark red; omit redundant subtitles;
+- no visible headline or subtitle on inline diagrams when the surrounding article already introduces the subject;
 - no decorative context badges in the upper-right corner; put necessary scope in the title, subtitle, or directly beside the relevant element;
-- one clear technical composition beneath the title, organized from left to right;
+- one clear technical composition, organized from left to right;
 - related components grouped inside labeled system boundaries;
 - dark navy section headers, dark red primary flows, and muted blue or green secondary flows;
 - rectangular nodes with modest corner radii, thin borders, restrained shadows, and generous internal padding;
@@ -42,6 +42,7 @@ Generate static SVG and PNG assets by default. Add GIF or SVG animation only whe
 
 When animation is requested:
 
+- choose animation only when it clarifies a sequence, a state change, or independent progress; keep inventories, contracts, and comparisons static unless motion adds information;
 - keep nodes, labels, containers, and the camera stationary;
 - animate only meaningful system behavior such as event flow, replication, processing, retries, or offset progress;
 - use small particles or compact markers that follow existing routes;
@@ -115,9 +116,11 @@ Create a 3:2 cover image for an article about Kafka consumer lag using the repos
 When an image needs text:
 
 - Keep text short.
+- Preserve semantic labels and scope conditions inside inline diagrams (for example, one Consumer Group or an unchanged Partition count). Removing a redundant heading must not remove a condition needed to interpret the diagram.
+- After removing a heading, fit the canvas to the remaining content; do not leave its empty space behind. Keep accessible SVG title and description metadata.
 - Provide exact text in the prompt.
 - Avoid long sentences inside the image.
-- Prefer 1 title plus 3-5 labels.
+- Prefer a short cover title and a few labels; inline diagrams normally need only labels.
 - Verify generated text carefully before using the image.
 
 ## File Naming
