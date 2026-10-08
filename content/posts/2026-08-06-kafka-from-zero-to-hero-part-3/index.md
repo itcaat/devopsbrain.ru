@@ -3,7 +3,8 @@ title: "Kafka: Record, Offset и Append-Only Log — Часть 3"
 date: 2026-10-05T10:00:00+03:00
 description: "Разбираем, что физически хранится внутри Kafka Partition: как устроены Record, Key, Value, Timestamp, Headers, зачем нужен Offset и почему append-only log делает Kafka такой быстрой."
 tags: [kafka]
-thumbnail: "images/kafka-records-overview.png"
+thumbnail: "images/kafka-preview.png"
+thumbnail_native_ratio: true
 toc: true
 series: "kafka-from-zero-to-hero"
 tldr: "Внутри Partition Kafka хранит append-only log. Offset задаёт позицию записи, а Consumer хранит только свою точку чтения."

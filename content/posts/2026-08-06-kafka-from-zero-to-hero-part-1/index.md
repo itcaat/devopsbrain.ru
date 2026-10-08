@@ -3,7 +3,8 @@ title: "Kafka: архитектура и базовые принципы — Ч�
 date: 2026-08-06T09:00:00+03:00
 description: "Что такое Apache Kafka, как она помогает снижать связанность между сервисами, когда она действительно нужна и как устроены Broker, Topic, Producer и Consumer."
 tags: [kafka]
-thumbnail: "images/kafka-overview.png"
+thumbnail: "images/kafka-preview.png"
+thumbnail_native_ratio: true
 toc: true
 series: "kafka-from-zero-to-hero"
 tldr: "Kafka лучше понимать не как обычную очередь, а как распределённый журнал событий. В первой части разбираем, зачем она нужна, когда оправдана и из каких базовых сущностей состоит."

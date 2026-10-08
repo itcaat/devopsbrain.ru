@@ -125,6 +125,12 @@ When an image needs text:
 
 ## File Naming
 
+### Feed Previews
+
+Create dedicated previews for compact article-list cards instead of reusing wide, detailed inline diagrams. Use a few large elements, a short topic label, and an optional series number. Inspect them at the actual desktop card size (currently 200 x 130 pixels).
+
+For the Kafka series, use `images/kafka-preview.svg` and `images/kafka-preview.png`; keep existing overview diagrams intact. Set `thumbnail_native_ratio: true` in front matter when the entire preview must remain visible at desktop and mobile widths. This opts the feed image into its natural aspect ratio instead of a fixed-height crop.
+
 Store every visual asset for an article in the `images/` subdirectory of that article:
 
 ```text

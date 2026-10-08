@@ -3,7 +3,8 @@ title: "Kafka: что делает её производительной — Ч�
 date: 2026-10-05T12:00:00+03:00
 description: "Разбираем ключевые причины высокой производительности Kafka: append-only log, последовательную запись, Page Cache, batching, partitioning, immutability и Zero Copy."
 tags: [kafka]
-thumbnail: "images/kafka-performance-overview.png"
+thumbnail: "images/kafka-preview.png"
+thumbnail_native_ratio: true
 toc: true
 series: "kafka-from-zero-to-hero"
 tldr: "Kafka быстрая не из-за магии, а из-за простых инженерных решений: последовательной записи, Page Cache, batching, partitioning, неизменяемости и Zero Copy."

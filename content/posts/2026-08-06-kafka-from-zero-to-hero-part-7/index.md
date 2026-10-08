@@ -3,7 +3,8 @@ title: "Kafka: Retention, Compaction и контракты событий — Ч
 date: 2026-10-05T14:00:00+03:00
 description: "Выбираем срок хранения событий Kafka, разбираем Log Compaction, eventId, версионирование, совместимость схем, Schema Registry и ответственность за Topic."
 tags: [kafka]
-thumbnail: "images/kafka-contracts-overview.png"
+thumbnail: "images/kafka-preview.png"
+thumbnail_native_ratio: true
 toc: true
 series: "kafka-from-zero-to-hero"
 tldr: "Срок хранения определяет доступную историю и возможности восстановления. Контракт события должен оставаться понятным и совместимым для всех получателей, включая тех, кто перечитывает старые данные."

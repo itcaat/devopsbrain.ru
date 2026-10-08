@@ -146,3 +146,15 @@ body.light-theme .posts .post-card {
         display: inline-block;
     }
 }
+
+/* Opt-in for dedicated previews that must remain uncropped at every width. */
+.list .post-card .post-card-thumb--native,
+.posts .post-card .post-card-thumb--native {
+    height: auto;
+}
+
+.list .post-card .post-card-thumb--native img,
+.posts .post-card .post-card-thumb--native img {
+    display: block;
+    height: auto;
+}

@@ -3,7 +3,8 @@ title: "Kafka: Retry, DLQ и эксплуатация Consumer — Часть 9"
 date: 2026-10-05T16:00:00+03:00
 description: "Организуем восстановление Consumer: retry-топики, DLQ, pause/resume, длительная обработка сообщений, worker pool, Consumer Lag, большие сообщения, production-настройки и мониторинг."
 tags: [kafka]
-thumbnail: "images/kafka-operations-overview.png"
+thumbnail: "images/kafka-preview.png"
+thumbnail_native_ratio: true
 toc: true
 series: "kafka-from-zero-to-hero"
 tldr: "Повторы должны иметь понятный предел и учитывать порядок событий. Retry и DLQ требуют надёжного переноса сообщений, а lag, состояние ISR и бизнес-задержка показывают, успевает ли система восстановиться."

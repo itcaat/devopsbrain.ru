@@ -4,9 +4,13 @@
 {{- if not $raw -}}{{- with .Params.image -}}{{- $raw = . -}}{{- end -}}{{- end -}}
 
 {{- if $raw -}}
+  {{- $thumbClass := "post-card-thumb" -}}
+  {{- if .Params.thumbnail_native_ratio -}}
+    {{- $thumbClass = printf "%s post-card-thumb--native" $thumbClass -}}
+  {{- end -}}
   {{- /* Remote URL */ -}}
   {{- if or (hasPrefix $raw "http://") (hasPrefix $raw "https://") -}}
-    <a class="post-card-thumb" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+    <a class="{{ $thumbClass }}" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
       <img src="{{ $raw }}" alt="{{ .Title }}" loading="lazy" decoding="async" />
     </a>
   {{- else -}}
@@ -16,18 +20,17 @@
       {{- $res = .Resources.GetMatch (printf "**/%s" $raw) -}}
     {{- end -}}
     {{- if $res -}}
-      <a class="post-card-thumb" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+      <a class="{{ $thumbClass }}" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
         <img src="{{ $res.RelPermalink }}" alt="{{ .Title }}" loading="lazy" decoding="async" />
       </a>
     {{- else -}}
       {{- /* Fallback: treat as site-relative path */ -}}
-      <a class="post-card-thumb" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+      <a class="{{ $thumbClass }}" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
         <img src="{{ $raw | relURL }}" alt="{{ .Title }}" loading="lazy" decoding="async" />
       </a>
     {{- end -}}
   {{- end -}}
 {{- end -}}
-
 
 
 

@@ -3,7 +3,8 @@ title: "Kafka: гарантии доставки, Outbox и идемпотент
 date: 2026-10-05T15:00:00+03:00
 description: "Разбираем надёжный путь события от базы приложения до Consumer: подтверждение записи, повторные попытки отправки, Transactional Outbox, commit offset, at-least-once и идемпотентная обработка."
 tags: [kafka]
-thumbnail: "images/kafka-delivery-overview.png"
+thumbnail: "images/kafka-preview.png"
+thumbnail_native_ratio: true
 toc: true
 series: "kafka-from-zero-to-hero"
 tldr: "Надёжная запись в Kafka — лишь один этап. Outbox связывает изменение базы с публикацией события, а выбор момента commit offset и идемпотентность Consumer помогают переживать сбои без повторного бизнес-эффекта."

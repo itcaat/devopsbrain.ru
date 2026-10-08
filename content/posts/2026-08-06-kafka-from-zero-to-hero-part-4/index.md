@@ -3,7 +3,8 @@ title: "Kafka: репликация, Leader, Follower и ISR — Часть 4"
 date: 2026-10-05T11:00:00+03:00
 description: "Разбираем отказоустойчивость Kafka: как Partition реплицируется между Broker, зачем нужны Leader и Follower, что такое ISR, как выбирается новый лидер и как acks влияет на надёжность записи."
 tags: [kafka]
-thumbnail: "images/kafka-replication-overview.png"
+thumbnail: "images/kafka-preview.png"
+thumbnail_native_ratio: true
 toc: true
 series: "kafka-from-zero-to-hero"
 tldr: "Репликация защищает Kafka от отказов Broker. Leader принимает чтение и запись, Followers синхронизируются, а ISR помогает выбрать актуальную реплику при сбое."

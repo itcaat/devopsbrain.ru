@@ -3,7 +3,8 @@ title: "Kafka: как масштабируются Partitions, Consumer Groups �
 date: 2026-09-07T10:00:00+03:00
 description: "Разбираем, как Kafka масштабируется горизонтально: зачем нужны Partition, как Producer выбирает партицию, почему порядок гарантируется только внутри одной Partition и как Consumer Group распределяет нагрузку между Consumer."
 tags: [kafka]
-thumbnail: "images/kafka-scaling-overview.png"
+thumbnail: "images/kafka-preview.png"
+thumbnail_native_ratio: true
 toc: true
 series: "kafka-from-zero-to-hero"
 tldr: "Partitions дают Kafka параллелизм, а Consumer Groups распределяют чтение между обработчиками. Порядок сообщений сохраняется только внутри одной Partition."

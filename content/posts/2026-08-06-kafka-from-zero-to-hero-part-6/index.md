@@ -3,7 +3,8 @@ title: "Kafka: события, команды, Topics и Keys — Часть 6"
 date: 2026-10-05T13:00:00+03:00
 description: "Проектируем поток Kafka на примере интернет-магазина: команды и события, границы Topic, именование, Key, горячие Partition и выбор их количества."
 tags: [kafka]
-thumbnail: "images/kafka-stream-design-overview.png"
+thumbnail: "images/kafka-preview.png"
+thumbnail_native_ratio: true
 toc: true
 series: "kafka-from-zero-to-hero"
 tldr: "Сначала определяем назначение сообщения, затем выбираем Topic, Key и число Partition. Эти решения задают границы потока, порядок событий и параллелизм обработки."
