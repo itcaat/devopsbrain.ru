@@ -1,0 +1,31 @@
+{{ define "main" }}
+<main class="channel-map">
+  <article>
+    <div class="channel-map-header">
+      <p class="channel-map-eyebrow">Навигация по материалам</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="channel-map-description">{{ . }}</p>{{ end }}
+      <p class="channel-map-updated">Обновлено {{ .Lastmod.Format "02.01.2006" }}</p>
+    </div>
+
+    {{ if .Params.toc }}
+    <nav class="channel-map-toc" aria-label="Разделы карты канала">
+      <strong>Перейти к теме</strong>
+      {{ .TableOfContents }}
+    </nav>
+    {{ end }}
+
+    <section class="body channel-map-content">
+      {{ .Content }}
+    </section>
+
+    <aside class="channel-map-cta">
+      <div>
+        <strong>Новые материалы выходят в Telegram</strong>
+        <p>Подписывайтесь, чтобы не ждать следующего обновления карты.</p>
+      </div>
+      <a href="https://t.me/devopsbrain" target="_blank" rel="noopener">Открыть канал →</a>
+    </aside>
+  </article>
+</main>
+{{ end }}
